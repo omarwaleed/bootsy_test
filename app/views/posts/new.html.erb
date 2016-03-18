@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="large-3 column"><p> </p></div>
+	<div class="large-6 column">
+		<%= form_for(:post, :url => {:action => 'create', :controller => '/post'}, remote: true) do |f| %>
+			<%= f.bootsy_area(:body, :size => '20x10', :class => 'index_boosty', :editor_options => {:color => false, :image => true}).html_safe %>
+			<div class="submit_container">
+				<%= f.submit 'Publish', :name => 'publish', :class => 'my_submit', :id => 'publish_btn' %>
+			</div>
+		<% end %>
+
+		<%= render 'all' %>
+	</div>
+	<div class="large-3 column"></div>
+</div>

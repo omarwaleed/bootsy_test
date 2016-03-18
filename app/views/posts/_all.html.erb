@@ -1,0 +1,5 @@
+<div id="all_div">
+	<% @posts.each do |p| %>
+		<%= p.body.html_safe %><br>
+	<% end %>
+</div>
